@@ -91,12 +91,12 @@ public class FindCommandParserTest {
 
         FindCommand expectedEmailFindCommand = new FindCommand(predicateComparator, predicateComparator);
         assertParseSuccess(parser,
-                PREFIX_EMAIL + PREAMBLE_WHITESPACE
+                PREFIX_EMAIL + " " + PREAMBLE_WHITESPACE
                         + "test@mail.com bob@box.net", expectedEmailFindCommand);
 
         // multiple whitespaces between keywords
         assertParseSuccess(parser,
-                PREFIX_EMAIL + PREAMBLE_WHITESPACE
+                PREFIX_EMAIL + " " + PREAMBLE_WHITESPACE
                         + " \n test@mail.com \n \t bob@box.net  \t", expectedEmailFindCommand);
     }
 
