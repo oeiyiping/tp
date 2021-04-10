@@ -69,11 +69,11 @@ public class CommandTestUtil {
     public static final String INVALID_NAME_DESC = " " + PREFIX_NAME + " James&"; // '&' not allowed in names
     public static final String INVALID_PHONE_DESC = " " + PREFIX_PHONE + " 911a"; // 'a' not allowed in phones
     public static final String INVALID_EMAIL_DESC = " " + PREFIX_EMAIL + " bob!yahoo"; // missing '@' symbol
-    public static final String INVALID_ADDRESS_DESC = " " + PREFIX_ADDRESS + " " ; // empty string not allowed for addresses
+    public static final String INVALID_ADDRESS_DESC = " " + PREFIX_ADDRESS + " "; // empty string not allowed for addresses
     public static final String INVALID_TAG_DESC = " " + PREFIX_TAG + " hubby*"; // '*' not allowed in tags
-    public static final String INVALID_COMPANY_DESC = " " + PREFIX_COMPANY + " " ; // empty string not allowed for company
+    public static final String INVALID_COMPANY_DESC = " " + PREFIX_COMPANY + " "; // empty string not allowed for company
     public static final String INVALID_JOB_TITLE_DESC = " "
-            + PREFIX_JOB_TITLE; // empty string not allowed for job title
+            + PREFIX_JOB_TITLE + " "; // empty string not allowed for job title
 
     public static final String INVALID_ALIAS = "";
     public static final String INVALID_COMMAND = "zzz";
@@ -90,8 +90,8 @@ public class CommandTestUtil {
     public static final String EMPTY_COMPANY_DESC = " " + PREFIX_COMPANY + " " ;
     public static final String EMPTY_JOB_TITLE_DESC = " " + PREFIX_JOB_TITLE + " " ;
     public static final String EMPTY_ADDRESS_DESC = " " + PREFIX_ADDRESS + " " ;
-    public static final String EMPTY_TAG_DESC = " " + PREFIX_TAG;
-    public static final String EMPTY_REMARK_DESC = " " + PREFIX_REMARK;
+    public static final String EMPTY_TAG_DESC = " " + PREFIX_TAG + " ";
+    public static final String EMPTY_REMARK_DESC = " " + PREFIX_REMARK + " ";
 
     public static final EditCommand.EditPersonDescriptor DESC_AMY;
     public static final EditCommand.EditPersonDescriptor DESC_BOB;

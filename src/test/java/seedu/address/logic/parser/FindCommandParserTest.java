@@ -46,11 +46,11 @@ public class FindCommandParserTest {
 
         FindCommand expectedNameFindCommand = new FindCommand(predicateComparator, predicateComparator);
         assertParseSuccess(parser,
-                PREFIX_NAME + PREAMBLE_WHITESPACE + "Alice Bob", expectedNameFindCommand);
+                PREFIX_NAME + " " + PREAMBLE_WHITESPACE + "Alice Bob", expectedNameFindCommand);
 
         // multiple whitespaces between keywords
         assertParseSuccess(parser,
-                PREFIX_NAME + PREAMBLE_WHITESPACE + " \n Alice \n \t Bob  \t", expectedNameFindCommand);
+                PREFIX_NAME +  " " + PREAMBLE_WHITESPACE + " \n Alice \n \t Bob  \t", expectedNameFindCommand);
     }
 
     @Test
@@ -61,11 +61,12 @@ public class FindCommandParserTest {
 
         FindCommand expectedTagFindCommand = new FindCommand(predicateComparator, predicateComparator);
         assertParseSuccess(parser,
-                PREFIX_TAG + PREAMBLE_WHITESPACE + "Hotline Service", expectedTagFindCommand);
+                PREFIX_TAG + " " + PREAMBLE_WHITESPACE + "Hotline Service", expectedTagFindCommand);
 
         // multiple whitespaces between keywords
         assertParseSuccess(parser,
-                PREFIX_TAG + PREAMBLE_WHITESPACE + " \n Hotline \n \t Service  \t", expectedTagFindCommand);
+                PREFIX_TAG + " " +  PREAMBLE_WHITESPACE
+                        + " \n Hotline \n \t Service  \t", expectedTagFindCommand);
     }
 
     @Test
@@ -76,11 +77,12 @@ public class FindCommandParserTest {
 
         FindCommand expectedRemarkFindCommand = new FindCommand(predicateComparator, predicateComparator);
         assertParseSuccess(parser,
-                PREFIX_REMARK + PREAMBLE_WHITESPACE + "HR Network", expectedRemarkFindCommand);
+                PREFIX_REMARK + " " + PREAMBLE_WHITESPACE + "HR Network", expectedRemarkFindCommand);
 
         // multiple whitespaces between keywords
         assertParseSuccess(parser,
-                PREFIX_REMARK + PREAMBLE_WHITESPACE + " \n HR \n \t Network  \t", expectedRemarkFindCommand);
+                PREFIX_REMARK +  " " + PREAMBLE_WHITESPACE
+                        + " \n HR \n \t Network  \t", expectedRemarkFindCommand);
     }
 
     @Test
