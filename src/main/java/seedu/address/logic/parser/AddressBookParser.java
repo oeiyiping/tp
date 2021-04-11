@@ -55,7 +55,7 @@ public class AddressBookParser {
         matcher.matches();
 
         final String commandWord = matcher.group("commandWord");
-        arguments = matcher.group("arguments") + arguments;
+        arguments = matcher.group("arguments") + arguments + " ";
 
         switch (commandWord) {
 
