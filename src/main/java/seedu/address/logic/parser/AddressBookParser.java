@@ -55,7 +55,8 @@ public class AddressBookParser {
         matcher.matches();
 
         final String commandWord = matcher.group("commandWord");
-        arguments = matcher.group("arguments") + arguments + " ";
+        arguments = matcher.group("arguments") + arguments
+                + " "; // append whitespace to ensure that the last prefix (if any) is recognized as valid
 
         switch (commandWord) {
 
@@ -115,7 +116,8 @@ public class AddressBookParser {
         }
 
         final String commandWord = matcher.group("commandWord");
-        final String arguments = matcher.group("arguments");
+        final String arguments = matcher.group("arguments")
+                + " "; // append whitespace to ensure that the last prefix (if any) is recognized as valid
 
         switch (commandWord) {
 
