@@ -27,7 +27,7 @@ public class FilterCommandParser implements Parser<FilterCommand> {
     public FilterCommand parse(String args) throws ParseException {
         assert args != null;
 
-        if (args.isEmpty()) {
+        if (args.isBlank()) {
             return new FilterCommand(new DisplayFilterPredicate());
         }
         ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS,
