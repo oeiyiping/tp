@@ -151,6 +151,12 @@ public class AddressBookParser {
         case SelectCommand.COMMAND_WORD:
             return new SelectCommandParser().isValidCommandToAlias(arguments);
 
+        case EmailCommand.COMMAND_WORD:
+            return new EmailCommandParser().isValidCommandToAlias(arguments);
+
+        case FilterCommand.COMMAND_WORD:
+            return new FilterCommandParser().isValidCommandToAlias(arguments);
+
         default:
             return false;
         }
@@ -185,6 +191,10 @@ public class AddressBookParser {
         case TagCommand.COMMAND_WORD:
 
         case SelectCommand.COMMAND_WORD:
+
+        case FilterCommand.COMMAND_WORD:
+
+        case EmailCommand.COMMAND_WORD:
             return false;
 
         default:
